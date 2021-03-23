@@ -1,0 +1,30 @@
+{
+  "name": "testcafe-testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:chrome": "testcafe chrome ./tests",
+    "test:chrome:headless": "testcafe chrome:headless ./tests",
+    "test:chrome:mobile": "testcafe chrome:emulation:device=iphonex ./tests",
+    "test:firefox": "testcafe firefox ./tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vgdcarvalho/testCafe-testing.git"
+  },
+  "keywords": [
+    "Testing",
+    "Automation",
+    "TestCafe"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vgdcarvalho/testCafe-testing/issues"
+  },
+  "homepage": "https://github.com/vgdcarvalho/testCafe-testing#readme",
+  "dependencies": {
+    "testcafe": "^1.13.0"
+  }
+}
