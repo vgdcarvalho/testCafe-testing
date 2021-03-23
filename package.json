@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/vgdcarvalho/testCafe-testing#readme",
   "dependencies": {
+    "prettier": "^2.2.1",
     "testcafe": "^1.13.0"
   }
 }
