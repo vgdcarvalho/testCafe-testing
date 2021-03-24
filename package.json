@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:chrome": "testcafe chrome ./tests",
-    "test:chrome:headless": "testcafe chrome:headless ./tests",
-    "test:chrome:mobile": "testcafe chrome:emulation:device=iphonex ./tests",
-    "test:firefox": "testcafe firefox ./tests"
+    "test:chrome": "testcafe chrome ./tests -s takeOnFails=true --disable-page-caching",
+    "test:chrome:headless": "testcafe chrome:headless ./tests -s takeOnFails=true",
+    "test:chrome:mobile": "testcafe chrome:emulation:device=iphonex ./tests -s takeOnFails=true",
+    "test:firefox": "testcafe firefox ./tests -s takeOnFails=true"
   },
   "repository": {
     "type": "git",
