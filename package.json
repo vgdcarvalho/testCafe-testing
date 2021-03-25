@@ -7,7 +7,8 @@
     "test:chrome": "testcafe chrome ./tests -s takeOnFails=true --disable-page-caching",
     "test:chrome:headless": "testcafe chrome:headless ./tests -s takeOnFails=true",
     "test:chrome:mobile": "testcafe chrome:emulation:device=iphonex ./tests -s takeOnFails=true",
-    "test:firefox": "testcafe firefox ./tests -s takeOnFails=true"
+    "test:firefox": "testcafe firefox ./tests -s takeOnFails=true",
+    "test:chrome:bot": "testcafe chrome ./tests/testcafe_bot.test.js"
   },
   "repository": {
     "type": "git",
