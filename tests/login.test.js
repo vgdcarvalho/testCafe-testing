@@ -30,10 +30,11 @@ fixture `Login Test`
         await t.typeText(usernameInput, 'username', { paste: true })
         await t.typeText(passwordInput, 'password', { paste: true })
 
-        const submitBtn = Selector('.btn-primary')
+        const submitBtn = Selector('input[name="submit"]')
         await t.click(submitBtn)
 
         const accountTab = Selector('#account_summary_tab')
+        const loginForm = Selector('#login_form')
         await t.expect(accountTab.exists).ok()
         await t.expect(loginForm.exists).notOk()
     })

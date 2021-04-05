@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:chrome": "testcafe chrome ./tests -s takeOnFails=true --disable-page-caching",
+    "test:chrome": "testcafe chrome ./tests -s takeOnFails=true",
     "test:chrome:headless": "testcafe chrome:headless ./tests -s takeOnFails=true",
     "test:chrome:mobile": "testcafe chrome:emulation:device=iphonex ./tests -s takeOnFails=true",
     "test:firefox": "testcafe firefox ./tests -s takeOnFails=true",
