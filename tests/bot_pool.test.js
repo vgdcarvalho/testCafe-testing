@@ -12,6 +12,6 @@ test('Votando no Rodolffo', async t => {
     // Actions
     await t.click(rodolffoBtn)
     await t.typeText(emailInput, 'vgdcarvalho@hotmail.com', {paste:true})
-    await t.typeText(passInput, '*******', {paste:true})
+    await t.typeText(passInput, 'senhaboa', {paste:true})
     await t.click(checkbox)
 })
