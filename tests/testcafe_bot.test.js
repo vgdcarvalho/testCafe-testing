@@ -1,4 +1,4 @@
-import { Selector } from 'testcafe'
+/* import { Selector } from 'testcafe'
 
 fixture `Testing clicking bot with TestCafe`
     .page `https://devexpress.github.io/testcafe/example/`
@@ -22,4 +22,4 @@ fixture `Testing clicking bot with TestCafe`
             // Go back to the initial page to start over again
             await t.navigateTo("https://devexpress.github.io/testcafe/example/")
         }
-    })
+    }) */

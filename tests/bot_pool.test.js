@@ -10,7 +10,9 @@ test('Votando no Rodolffo', async t => {
     const passInput = Selector('#password')
     const checkbox = Selector('.recaptcha-checkbox-border')
     // Actions
+    await t.wait(10000)
     await t.click(rodolffoBtn)
+    await t.wait(10000)
     await t.typeText(emailInput, 'vgdcarvalho@hotmail.com', {paste:true})
     await t.typeText(passInput, 'senhaboa', {paste:true})
     await t.click(checkbox)
