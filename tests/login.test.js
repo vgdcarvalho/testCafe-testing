@@ -4,7 +4,7 @@ fixture `Login Test`
     .page `http://zero.webappsecurity.com/index.html`
 
     .beforeEach(async t => {
-        const singInBtn = Selector('#signin_button')
+        const singInBtn = Selector('#signin_button')       
         await t.click(singInBtn)
 
         const loginForm = Selector('#login_form')
@@ -37,4 +37,30 @@ fixture `Login Test`
         const loginForm = Selector('#login_form')
         await t.expect(accountTab.exists).ok()
         await t.expect(loginForm.exists).notOk()
+    })
+
+    test("User can logout only after loging in", async t => {
+        const logoutBtn = Selector('#logout_link')
+        await t.expect(logoutBtn.exists).notOk()
+
+        const usernameInput = Selector('#user_login')
+        const passwordInput = Selector('#user_password')
+        await t.typeText(usernameInput, 'username', { paste: true })
+        await t.typeText(passwordInput, 'password', { paste: true })
+
+        const submitBtn = Selector('input[name="submit"]')
+        await t.click(submitBtn)
+
+        const userIcon = Selector('.icon-user')
+        await t.click(userIcon)
+
+        const singInBtn = Selector('#signin_button')       
+
+        await t.expect(logoutBtn.exists).ok()
+        await t.expect(singInBtn.exists).notOk()
+
+        await t.click(logoutBtn)
+
+        await t.expect(logoutBtn.exists).notOk()
+        await t.expect(singInBtn.exists).ok()
     })
